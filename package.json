@@ -1,0 +1,29 @@
+{
+  "name": "prak-routing-tp",
+  "version": "1.0.0",
+  "description": "web-routing-typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "start": "ts-node src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Naimakhaa/prak-routing-tp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Naimakhaa/prak-routing-tp/issues"
+  },
+  "homepage": "https://github.com/Naimakhaa/prak-routing-tp#readme",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
