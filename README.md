@@ -11,7 +11,7 @@ project-node/
 └── src/
     └── server.ts
 
-⚙️ Cara Menjalankan
+Cara Menjalankan
 1. Pastikan Node.js sudah terinstall
 bashnode --version
 2. Install dependensi
@@ -20,14 +20,14 @@ bashnpm install
 bashnpm start
 Server akan berjalan di http://localhost:3000
 
-🗺️ Daftar Rute
-MethodPathDeskripsiResponseGET/Halaman 
-utamaHTMLGET/aboutHalaman 
-tentang kamiHTMLGET/api/usersAmbil semua data userJSONPOST/api/usersTambah user baruJSONSemua*Rute tidak ditemukanHTML 404
+Daftar Rute
+MethodPathDeskripsiResponseGET/Halaman utama
+HTMLGET/aboutHalaman 
+tentang kamiHTMLGET/api/usersAmbil semua data userJSONPOST/api/usersTambah user baruJSONSemua*
+Rute tidak ditemukanHTML 404
 
-🧪 Cara Menguji
+Cara Menguji
 Buka browser dan akses URL berikut:
-
 http://localhost:3000/ → Halaman Utama
 http://localhost:3000/about → Halaman About
 http://localhost:3000/api/users → Data user dalam format JSON
@@ -35,7 +35,7 @@ http://localhost:3000/api/users → Data user dalam format JSON
 Untuk menguji metode POST, gunakan curl di terminal:
 bashcurl -X POST http://localhost:3000/api/users
 
-🔍 Penjelasan Kode
+Penjelasan Kode
 1. Import Modul http
 typescriptimport * as http from 'http';
 Berbeda dengan Bun yang sudah menyediakan global Bun, Node.js memerlukan import modul http secara eksplisit. Modul ini adalah bawaan Node.js sehingga tidak perlu install tambahan.
@@ -62,12 +62,12 @@ req.url berisi path lengkap seperti /about?name=john, sehingga perlu di-parse te
 typescript// Rute: GET /
 if (path === '/' && method === 'GET') {
     res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end('<h1>🏠 Halaman Utama</h1><p>Selamat datang di server Node.js + TypeScript!</p>');
+    res.end('<h1>Halaman Utama</h1><p>Selamat datang di server Node.js + TypeScript!</p>');
 }
 // Rute: GET /about
 else if (path === '/about' && method === 'GET') {
     res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end('<h1>📄 Tentang Kami</h1><p>Ini adalah contoh routing manual sederhana.</p>');
+    res.end('<h1>Tentang Kami</h1><p>Ini adalah contoh routing manual sederhana.</p>');
 }
 // Rute: GET /api/users
 else if (path === '/api/users' && method === 'GET') {
@@ -85,7 +85,7 @@ else if (path === '/api/users' && method === 'POST') {
 // 404 Not Found
 else {
     res.writeHead(404, { 'Content-Type': 'text/html' });
-    res.end('<h1>❌ 404 - Halaman Tidak Ditemukan</h1>');
+    res.end('<h1>404 - Halaman Tidak Ditemukan</h1>');
 }
 Setiap kondisi memeriksa kombinasi path dan method. Inilah inti dari routing manual yang dapat menentukan rute mana yang merespons request tertentu.
 
