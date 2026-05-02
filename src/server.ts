@@ -22,12 +22,12 @@ const server = http.createServer((req, res) => {
   // Rute: GET /
   if (path === '/' && method === 'GET') {
     res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end('<h1>🏠 Halaman Utama</h1><p>Selamat datang di server Node.js + TypeScript!</p>');
+    res.end('<h1> Halaman Utama</h1><p>Selamat datang di server Node.js + TypeScript!</p>');
   }
   // Rute: GET /about
   else if (path === '/about' && method === 'GET') {
     res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end('<h1>📄 Tentang Kami</h1><p>Ini adalah contoh routing manual sederhana.</p>');
+    res.end('<h1> Tentang Kami</h1><p>Ini adalah contoh routing manual sederhana.</p>');
   }
   // Rute: GET /api/users (mengembalikan data JSON)
   else if (path === '/api/users' && method === 'GET') {
@@ -45,7 +45,7 @@ const server = http.createServer((req, res) => {
   // Jika tidak ada rute yang cocok → 404 Not Found
   else {
     res.writeHead(404, { 'Content-Type': 'text/html' });
-    res.end('<h1>❌ 404 - Halaman Tidak Ditemukan</h1>');
+    res.end('<h1> 404 - Halaman Tidak Ditemukan</h1>');
   }
 });
 
